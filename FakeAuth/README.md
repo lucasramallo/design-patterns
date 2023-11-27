@@ -1,3 +1,3 @@
-# mvc-java
+# FakeAuth
 
-Praticando arquitetura MVC com projetos Java
+Projeto simples simulando autenticação
