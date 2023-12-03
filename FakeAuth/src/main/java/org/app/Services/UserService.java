@@ -1,5 +1,6 @@
 package org.app.Services;
 
+import org.app.DB.DB;
 import org.app.Repositories.UserRepository;
 import org.app.domain.user.User;
 
@@ -13,5 +14,9 @@ public class UserService {
         User user = new User(name, cpf, email, password);
         this.userRepository.save(user);
         return user;
+    }
+
+    public void getUsers() {
+        this.userRepository.getUsers();
     }
 }

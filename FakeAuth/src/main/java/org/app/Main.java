@@ -16,6 +16,24 @@ public class Main {
                 "lucas@gmail.com",
                 "123"
         );
-        System.out.println(user.toString());
+
+        User user2 = userController.createUser(
+                "Lucas Silva",
+                "13716693498",
+                "lucas2@gmail.com",
+                "123"
+        );
+
+
+       userController.getUsers();
+
+        User user3 = userController.createUser(
+                "Julia Silva",
+                "13710993498",
+                "julia@gmail.com",
+                "123"
+        );
+
+        userController.getUsers();
     }
 }

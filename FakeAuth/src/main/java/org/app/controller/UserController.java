@@ -14,4 +14,8 @@ public class UserController {
         User user = this.userService.createUser(name, cpf, email, password);
         return user;
     }
+
+    public void getUsers() {
+        this.userService.getUsers();
+    }
 }

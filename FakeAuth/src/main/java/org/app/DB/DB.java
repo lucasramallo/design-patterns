@@ -17,9 +17,13 @@ public class DB {
 
     public static DB getInstance() {
         if(instance == null) {
-            return new DB();
+            instance = new DB();
         }
 
         return instance;
+    }
+
+    public ArrayList getUserArray() {
+        return userArray;
     }
 }
