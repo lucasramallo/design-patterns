@@ -1,4 +1,4 @@
-package org.app.models.user;
+package org.app.domain.user;
 
 import org.app.util.IdGenerator;
 

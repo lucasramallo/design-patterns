@@ -1,16 +1,25 @@
 package org.app.DB;
 
-import org.app.models.user.User;
+import org.app.domain.user.User;
 import java.util.ArrayList;
 
 public class DB {
-    private static ArrayList userArray;
+    private ArrayList userArray;
+    private static DB instance;
 
-    public DB() {
+    private DB() {
         this.userArray = new ArrayList<User>();
     }
 
     public void saveUser(User user) {
         userArray.add(user);
+    }
+
+    public static DB getInstance() {
+        if(instance == null) {
+            return new DB();
+        }
+
+        return instance;
     }
 }

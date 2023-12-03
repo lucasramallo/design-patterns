@@ -1,16 +1,14 @@
 package org.app.Repositories;
 
 import org.app.DB.DB;
-import org.app.models.user.User;
+import org.app.domain.user.User;
 
 public class UserRepository {
     private DB db;
 
-    public UserRepository() {
-        this.db = new DB();
-    }
+    public UserRepository() {}
 
     public void save(User user) {
-        this.db.saveUser(user);
+        DB.getInstance().saveUser(user);
     }
 }

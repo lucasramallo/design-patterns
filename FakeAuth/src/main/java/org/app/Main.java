@@ -1,13 +1,21 @@
 package org.app;
 
+import org.app.Repositories.UserRepository;
+import org.app.Services.UserService;
 import org.app.controller.UserController;
-import org.app.models.auth.Auth;
-import org.app.models.user.User;
+import org.app.domain.user.User;
 
 public class Main {
     public static void main(String[] args) {
-        UserController userController = new UserController();
-        User user = userController.createUser("Lucas", "13316693498", "lucas@gmail.com", "123");
+        UserRepository userRepository = new UserRepository();
+        UserService userService = new UserService(userRepository);
+        UserController userController = new UserController(userService);
+        User user = userController.createUser(
+                "Lucas",
+                "13316693498",
+                "lucas@gmail.com",
+                "123"
+        );
         System.out.println(user.toString());
     }
 }

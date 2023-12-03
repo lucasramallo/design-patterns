@@ -1,6 +1,6 @@
-package org.app.models.auth;
+package org.app.domain.auth;
 
-import org.app.models.user.User;
+import org.app.domain.user.User;
 import java.security.SecureRandom;
 
 public class Auth {

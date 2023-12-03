@@ -1,13 +1,13 @@
 package org.app.controller;
 
 import org.app.Services.UserService;
-import org.app.models.user.User;
+import org.app.domain.user.User;
 
 public class UserController {
     private UserService userService;
 
-    public UserController() {
-        this.userService = new UserService();
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
     public User createUser(String name, String cpf, String email, String password) {
